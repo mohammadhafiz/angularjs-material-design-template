@@ -22,6 +22,19 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('css'));
 });
 
+//Server 
+gulp.task('server', function()
+{
+    var options = {
+        fallback: 'index.html',
+        host: '0.0.0.0',
+        livereload: true,
+        port: 8080
+    };
+
+    return connect.server(options);
+});
+
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
     return gulp.src('js/*.js')
