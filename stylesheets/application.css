@@ -2,28 +2,56 @@
     font-weight: bold;
 }
 
+.app-background-blue {
+    background-color: #2196F3;
+}
+
 .app-background-cyan {
     background-color: #00BCD4;
+}
+
+.app-background-deep-purple {
+    background-color: #673AB7;
+}
+
+.app-background-green {
+    background-color: #4CAF50;
+}
+
+.app-background-grey {
+    background-color: #9E9E9E;
+}
+
+.app-background-light-blue {
+    background-color: #03A9F4;
+}
+
+.app-background-light-green {
+    background-color: #8BC34A;
+}
+
+.app-background-light-green {
+    background-color: #CDDC39;
+}
+
+.app-background-indigo {
+    background-color: #3F51B5;
 }
 
 .app-background-pink {
     background-color: #E91E63;
 }
 
-.app-background-red {
-    background-color: #F44336;
-}
-
 .app-background-purple {
     background-color: #9C27B0;
 }
 
-.app-background-teal {
-    background-color: #009688;
+.app-background-red {
+    background-color: #F44336;
 }
 
-.app-background-grey {
-    background-color: #9E9E9E;
+.app-background-teal {
+    background-color: #009688;
 }
 
 .app-container {
