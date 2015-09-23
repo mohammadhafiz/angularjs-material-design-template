@@ -100,5 +100,3 @@ application.run(['$location', '$rootScope', 'Auth',
             }
         });
     }]);
-
-application.value('secret', '53bh24t5jkhkljh54jg6jhgkhuklg62jyh6goigh');
