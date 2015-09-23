@@ -76,8 +76,8 @@ application.factory('Auth', ['$http', '$location', '$q', '$window', 'API', 'Sett
         {
             var data = {
                 grant_type: 'refresh_token',
-                client_id: Settings.client_id,
-                client_secret: Settings.client_secret,
+                user_id: Settings.user_id,
+                user_secret: Settings.user_secret,
                 scope: Settings.scopes.join(),
                 refresh_token: $window.localStorage.refresh_token,
             };
@@ -120,8 +120,8 @@ application.factory('Auth', ['$http', '$location', '$q', '$window', 'API', 'Sett
         {
             var data = {
                 grant_type: 'password',
-                client_id: Settings.client_id,
-                client_secret: Settings.client_secret,
+                user_id: Settings.user_id,
+                user_secret: Settings.user_secret,
                 scope: Settings.scopes.join(),
                 username: credentials['username'],
                 password: credentials['password'],

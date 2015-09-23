@@ -17,7 +17,7 @@ application.config(['$httpProvider',
     {
         $httpProvider.defaults.headers = {
             common: {
-                Accept: 'application/vnd.menggaris.v1+json',
+                'Content-Type': 'application/json',
             },
             post: {
                 'Content-Type': 'application/json',
