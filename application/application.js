@@ -16,18 +16,6 @@ application.config(['$httpProvider',
     function($httpProvider)
     {
         $httpProvider.defaults.headers = {
-            common: {
-                Accept: 'application/vnd.menggaris.v1+json',
-            },
-            post: {
-                'Content-Type': 'application/json',
-            },
-            put: {
-                'Content-Type': 'application/json',
-            },
-            delete: {
-                'Content-Type': 'application/json',
-            },
         };
 
         $httpProvider.interceptors.push('HttpInterceptor');
@@ -67,13 +55,6 @@ application.config(['$mdThemingProvider',
             .accentPalette('blue');
     }]);
 
-application.config(['$translateProvider',
-    function($translateProvider)
-    {
-        $translateProvider.useSanitizeValueStrategy('sanitize');
-        $translateProvider.preferredLanguage('en');
-    }]);
-
 application.config(['$locationProvider', '$routeProvider',
     function($locationProvider, $routeProvider)
     {
@@ -85,20 +66,3 @@ application.config(['$locationProvider', '$routeProvider',
             });
     }]);
 
-application.run(['$location', '$rootScope', 'Auth',
-    function($location, $rootScope, Auth)
-    {
-        $rootScope.$on('$routeChangeError', function(event, current, previous, rejection)
-        {
-            switch (rejection) {
-                case 'auth.is_guest':
-                    $location.path('/modules');
-                    break;
-                case 'auth.is_logged':
-                    Auth.forget();
-                    break;
-            }
-        });
-    }]);
-
-//application.value('secret', '53bh24t5jkhkljh54jg6jhgkhuklg62jyh6goigh');
