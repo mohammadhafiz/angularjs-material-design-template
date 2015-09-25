@@ -2,9 +2,9 @@ application.config(['$routeProvider',
     function($routeProvider)
     {
         $routeProvider
-            .when('/home', {
-                controller: 'HomeController',
-                templateUrl: 'home/home.html',
+            .when('/dashboard', {
+                controller: 'DashboardController',
+                templateUrl: 'dashboard/dashboard.html',
                 resolve: {
                     isGuest: ['Auth', function(Auth)
                     {

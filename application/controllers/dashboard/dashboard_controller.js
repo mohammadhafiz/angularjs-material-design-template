@@ -1,4 +1,4 @@
-application.controller('HomeController', ['$location', '$mdSidenav', '$scope', '$translate',
+application.controller('DashboardController', ['$location', '$mdSidenav', '$scope', '$translate',
     function($location, $mdSidenav, $scope, $translate)
     {
         $scope.theme = 'cyan';
@@ -14,7 +14,7 @@ application.controller('HomeController', ['$location', '$mdSidenav', '$scope', '
 
         $scope.reset = function()
         {
-            $scope.query.username = '';
+            $scope.query.$ = '';
         };
 
         $scope.menu = function()

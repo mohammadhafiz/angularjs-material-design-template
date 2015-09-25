@@ -81,22 +81,6 @@ application.config(['$locationProvider', '$routeProvider',
             .hashPrefix('!#');
 
         $routeProvider.otherwise({
-                redirectTo: '/home',
+                redirectTo: '/dashboard',
             });
-    }]);
-
-application.run(['$location', '$rootScope', 'Auth',
-    function($location, $rootScope, Auth)
-    {
-        $rootScope.$on('$routeChangeError', function(event, current, previous, rejection)
-        {
-            switch (rejection) {
-                case 'auth.is_guest':
-                    $location.path('/#');
-                    break;
-                case 'auth.is_logged':
-                    Auth.forget();
-                    break;
-            }
-        });
     }]);
