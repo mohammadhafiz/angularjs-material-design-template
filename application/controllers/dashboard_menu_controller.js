@@ -16,9 +16,9 @@ application.controller('DashboardMenuController', ['$location', '$scope',
             $location.path('/tables');
         };
 
-        $scope.form = function()
+        $scope.forms = function()
         {
-            $location.path('/form');
+            $location.path('/forms');
         };
 
         $scope.uiElement = function()
