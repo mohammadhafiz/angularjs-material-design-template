@@ -1,0 +1,36 @@
++------+----------------------------------------+--------------------------+---------------------------------------------------+-----------+------------+---------------------------------------+
+| Host | URI                                    | Name                     | Action                                            | Protected | Version(s) | Scope(s)                              |
++------+----------------------------------------+--------------------------+---------------------------------------------------+-----------+------------+---------------------------------------+
+|      | POST /api/access_token                 |                          | App\Http\Controllers\OAuth2Controller@accessToken | No        | v1         |                                       |
+|      | GET|HEAD /api/session                  |                          | App\Http\Controllers\OAuth2Controller@session     | Yes       | v1         |                                       |
+|      | GET|HEAD /api/users                    | api.users.index          | App\Http\Controllers\UserController@index         | Yes       | v1         | read_user_data                        |
+|      | POST /api/users                        | api.users.store          | App\Http\Controllers\UserController@store         | Yes       | v1         | create_user_data                      |
+|      | GET|HEAD /api/users/{users}            | api.users.show           | App\Http\Controllers\UserController@show          | Yes       | v1         | read_user_data                        |
+|      | PUT /api/users/{users}                 | api.users.update         | App\Http\Controllers\UserController@update        | Yes       | v1         | update_user_data                      |
+|      | PATCH /api/users/{users}               |                          | App\Http\Controllers\UserController@update        | Yes       | v1         | update_user_data                      |
+|      | DELETE /api/users/{users}              | api.users.destroy        | App\Http\Controllers\UserController@destroy       | Yes       | v1         | delete_user_data                      |
+|      | GET|HEAD /api/scopes                   | api.scopes.index         | App\Http\Controllers\ScopeController@index        | Yes       | v1         | read_scope_data                       |
+|      | POST /api/scopes                       | api.scopes.store         | App\Http\Controllers\ScopeController@store        | Yes       | v1         | create_scope_data                     |
+|      | GET|HEAD /api/scopes/{scopes}          | api.scopes.show          | App\Http\Controllers\ScopeController@show         | Yes       | v1         | read_scope_data                       |
+|      | PUT /api/scopes/{scopes}               | api.scopes.update        | App\Http\Controllers\ScopeController@update       | Yes       | v1         | update_scope_data                     |
+|      | PATCH /api/scopes/{scopes}             |                          | App\Http\Controllers\ScopeController@update       | Yes       | v1         | update_scope_data                     |
+|      | DELETE /api/scopes/{scopes}            | api.scopes.destroy       | App\Http\Controllers\ScopeController@destroy      | Yes       | v1         | delete_scope_data                     |
+|      | GET|HEAD /api/grants                   | api.grants.index         | App\Http\Controllers\GrantController@index        | Yes       | v1         | read_grant_data                       |
+|      | POST /api/grants                       | api.grants.store         | App\Http\Controllers\GrantController@store        | Yes       | v1         | create_grant_data                     |
+|      | GET|HEAD /api/grants/{grants}          | api.grants.show          | App\Http\Controllers\GrantController@show         | Yes       | v1         | read_grant_data                       |
+|      | PUT /api/grants/{grants}               | api.grants.update        | App\Http\Controllers\GrantController@update       | Yes       | v1         | update_grant_data                     |
+|      | PATCH /api/grants/{grants}             |                          | App\Http\Controllers\GrantController@update       | Yes       | v1         | update_grant_data                     |
+|      | DELETE /api/grants/{grants}            | api.grants.destroy       | App\Http\Controllers\GrantController@destroy      | Yes       | v1         | delete_grant_data                     |
+|      | GET|HEAD /api/grants/{grants}/scopes   | api.grants.scopes.index  | App\Http\Controllers\GrantScopeController@index   | Yes       | v1         | read_grant_data, read_scope_data      |
+|      | POST /api/grants/{grants}/scopes       | api.grants.scopes.store  | App\Http\Controllers\GrantScopeController@store   | Yes       | v1         | update_grant_data, update_scope_data  |
+|      | GET|HEAD /api/clients                  | api.clients.index        | App\Http\Controllers\ClientController@index       | Yes       | v1         | read_client_data                      |
+|      | POST /api/clients                      | api.clients.store        | App\Http\Controllers\ClientController@store       | Yes       | v1         | create_client_data                    |
+|      | GET|HEAD /api/clients/{clients}        | api.clients.show         | App\Http\Controllers\ClientController@show        | Yes       | v1         | read_client_data                      |
+|      | PUT /api/clients/{clients}             | api.clients.update       | App\Http\Controllers\ClientController@update      | Yes       | v1         | update_client_data                    |
+|      | PATCH /api/clients/{clients}           |                          | App\Http\Controllers\ClientController@update      | Yes       | v1         | update_client_data                    |
+|      | DELETE /api/clients/{clients}          | api.clients.destroy      | App\Http\Controllers\ClientController@destroy     | Yes       | v1         | delete_client_data                    |
+|      | GET|HEAD /api/clients/{clients}/grants | api.clients.grants.index | App\Http\Controllers\ClientGrantController@index  | Yes       | v1         | read_client_data, read_grant_data     |
+|      | POST /api/clients/{clients}/grants     | api.clients.grants.store | App\Http\Controllers\ClientGrantController@store  | Yes       | v1         | update_client_data, update_grant_data |
+|      | GET|HEAD /api/clients/{clients}/scopes | api.clients.scopes.index | App\Http\Controllers\ClientScopeController@index  | Yes       | v1         | read_client_data, read_scope_data     |
+|      | POST /api/clients/{clients}/scopes     | api.clients.scopes.store | App\Http\Controllers\ClientScopeController@store  | Yes       | v1         | update_client_data, update_scope_data |
++------+----------------------------------------+--------------------------+---------------------------------------------------+-----------+------------+---------------------------------------+

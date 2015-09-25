@@ -92,7 +92,7 @@ application.run(['$location', '$rootScope', 'Auth',
         {
             switch (rejection) {
                 case 'auth.is_guest':
-                    $location.path('/modules');
+                    $location.path('/#');
                     break;
                 case 'auth.is_logged':
                     Auth.forget();
