@@ -50,8 +50,16 @@ application.config(['$mdThemingProvider',
             .primaryPalette('green')
             .accentPalette('indigo');
             
+        $mdThemingProvider.theme('light-green')
+            .primaryPalette('light-green')
+            .accentPalette('indigo');
+            
         $mdThemingProvider.theme('purple')
             .primaryPalette('purple')
+            .accentPalette('indigo');
+            
+        $mdThemingProvider.theme('pink')
+            .primaryPalette('pink')
             .accentPalette('indigo');
 
         $mdThemingProvider.theme('red')

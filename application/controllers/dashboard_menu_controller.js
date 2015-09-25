@@ -31,8 +31,8 @@ application.controller('DashboardMenuController', ['$location', '$scope',
             $location.path('/dropDown');
         };
 
-        $scope.samplePage = function()
+        $scope.samplePages = function()
         {
-            $location.path('/samplePage');
+            $location.path('/samplePages');
         };
     }]);
