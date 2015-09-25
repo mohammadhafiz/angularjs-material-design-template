@@ -2,7 +2,7 @@ application.config(['$routeProvider',
     function($routeProvider)
     {
         $routeProvider
-            .when('/login', {
+            .when('/todo', {
                 controller: 'LoginController',
                 templateUrl: 'login.html',
                 resolve: {
