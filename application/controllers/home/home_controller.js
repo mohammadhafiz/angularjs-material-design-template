@@ -1,7 +1,7 @@
 application.controller('HomeController', ['$location', '$mdSidenav', '$scope', '$translate',
     function($location, $mdSidenav, $scope, $translate)
     {
-        $scope.theme = 'red';
+        $scope.theme = 'cyan';
 
         $scope.query = {
             username: '',

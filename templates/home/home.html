@@ -2,12 +2,12 @@
     layout="row"
     md-swipe-left="close()"
     md-swipe-right="menu()"
-    md-theme="{{ theme }}">
+    md-theme="{{theme}}">
     <md-sidenav class="md-sidenav-left md-whiteframe-z2"
-        md-component-id="filter"
+        md-component-id="menu"
         md-is-locked-open="$mdMedia('gt-md')">
         <md-toolbar class="app-toolbar md-whiteframe-z2"
-                ng-animate="animate" md-component-id="filter>
+                ng-animate="animate" md-component-id="menu>
             <div class="md-toolbar-tools">
             {{ 'title_menu' | translate }}
             </div>
@@ -20,7 +20,7 @@
         <md-toolbar class="md-whiteframe-z2"
             md-scroll-shrink>
             <div class="md-toolbar-tools"
-                ng-if="theme == 'red'">
+                ng-if="theme == 'cyan'">
                 <md-button class="md-icon-button"
                     hide-gt-md
                     ng-click="menu()">
@@ -39,7 +39,7 @@
             <div class="md-toolbar-tools"
                 ng-if="theme == 'white'">
                 <md-button class="md-icon-button"
-                    ng-click="$parent.theme = 'red'">
+                    ng-click="$parent.theme = 'cyan'">
                     <md-tooltip>{{ 'action_back' | translate }}</md-tooltip>
                     <md-icon>arrow_back</md-icon>
                 </md-button>
