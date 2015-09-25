@@ -81,7 +81,7 @@ application.config(['$locationProvider', '$routeProvider',
             .hashPrefix('!#');
 
         $routeProvider.otherwise({
-                redirectTo: '/todo',
+                redirectTo: '/home',
             });
     }]);
 

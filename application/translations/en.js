@@ -2,6 +2,11 @@ application.config(['$translateProvider',
     function($translateProvider)
     {
         $translateProvider.translations('en', {
+            
+            'title_home': 'Home',
+            'title_menu': 'Menu',
+            'title_home': 'Home',
+            'title_home': 'Home',
 
             'toast_incorrect_credentials': 'The user credentials is incorrect.',
             'toast_invalid_refresh_token': 'The refresh token is invalid.',
