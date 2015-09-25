@@ -3,12 +3,14 @@ application.config(['$translateProvider',
     {
         $translateProvider.translations('en', {
             
+            'action_back': 'Back',
             'action_menu': 'Menu',
+            'action_reset': 'Reset',
             'action_search': 'Search',
             
             'title_insert_chart': 'Charts',
             'title_dashboard': 'Dashboard',
-            'title_drop_down': 'Multi-Level DropDowns',
+            'title_drop_down': 'Multi-Level DropDown',
             'title_form': 'Form',
             'title_home': 'Home',
             'title_menu': 'Menu',
