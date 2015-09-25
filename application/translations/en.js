@@ -4,7 +4,9 @@ application.config(['$translateProvider',
         $translateProvider.translations('en', {
             
             'action_back': 'Back',
+            'action_email': 'Email',
             'action_menu': 'Menu',
+            'action_notifications': 'Notifications',
             'action_reset': 'Reset',
             'action_search': 'Search',
             
