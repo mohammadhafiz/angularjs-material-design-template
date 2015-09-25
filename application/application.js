@@ -41,7 +41,11 @@ application.config(['$mdThemingProvider',
         $mdThemingProvider.theme('cyan')
             .primaryPalette('cyan')
             .accentPalette('indigo');
-
+            
+        $mdThemingProvider.theme('deep-purple')
+            .primaryPalette('deep-purple')
+            .accentPalette('indigo');
+            
         $mdThemingProvider.theme('green')
             .primaryPalette('green')
             .accentPalette('indigo');
