@@ -21,17 +21,12 @@
                     <md-tooltip>{{ 'action_menu' | translate }}</md-tooltip>
                     <md-icon>menu</md-icon>
                 </md-button>
-                <h2 class="md-title">{{ 'title_Inventory_management_System' | translate }}</h2>
+                <h2 class="md-title">{{ 'title_inventory_management_system' | translate }}</h2>
                 <span flex></span>
                 <md-button class="md-icon-button"
                     ng-click="$parent.theme = 'white'">
                     <md-tooltip>{{ 'action_search' | translate }}</md-tooltip>
                     <md-icon>search</md-icon>
-                </md-button>
-                <md-button class="md-icon-button"
-                    ng-click="create()">
-                    <md-tooltip>{{ 'action_create_client' | translate }}</md-tooltip>
-                    <md-icon>add</md-icon>
                 </md-button>
             </div>
 
@@ -56,47 +51,5 @@
                 </md-button>
             </div>
         </md-toolbar>
-
-        <md-list flex
-            md-virtual-repeat-container>
-            <md-subheader class="md-no-sticky">{{ 'title_record_count' | translate:data }}</md-subheader>
-            <md-list-item class="md-2-line"
-                md-virtual-repeat="username in data = (users | filter:query:regex | orderBy:'username')"
-                ng-click="read(client)">
-                <md-icon>vpn_key</md-icon>
-                <div class="md-list-item-text">
-                    <h3 md-highlight-text="query.$"
-                        md-highlight-flags="gi">
-                        {{ username }}
-                    </h3>
-                    <p md-highlight-text="query.$"
-                        md-highlight-flags="gi">
-                        {{ user.id }}
-                    </p>
-                </div>
-                <md-menu md-position-mode="target-right target">
-                    <md-button aria-label="{{ 'action_more' | translate }}"
-                        class="md-icon-button"
-                        ng-click="$mdOpenMenu($event)">
-                        <md-tooltip>{{ 'action_more' | translate }}</md-tooltip>
-                        <md-icon>more_vert</md-icon>
-                    </md-button>
-                    <md-menu-content width="4">
-                        <md-menu-item>
-                            <md-button ng-click="update(client)">
-                                <md-icon>edit</md-icon>
-                                {{ 'action_update' | translate }}
-                            </md-button>
-                        </md-menu-item>
-                        <md-menu-item>
-                            <md-button ng-click="delete($event, client)">
-                                <md-icon>delete</md-icon>
-                                {{ 'action_delete' | translate }}
-                            </md-button>
-                        </md-menu-item>
-                    </md-menu-content>
-                </md-menu>
-            </md-list-item>
-        </md-list>
     </md-content>
 </md-content>

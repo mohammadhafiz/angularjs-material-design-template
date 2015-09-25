@@ -3,10 +3,12 @@ application.config(['$translateProvider',
     {
         $translateProvider.translations('en', {
             
+            'action_menu': 'Menu',
+            'action_search': 'Search',
+            
             'title_home': 'Home',
             'title_menu': 'Menu',
-            'title_home': 'Home',
-            'title_home': 'Home',
+            'title_inventory_management_system': 'Inventory Management System',
 
             'toast_incorrect_credentials': 'The user credentials is incorrect.',
             'toast_invalid_refresh_token': 'The refresh token is invalid.',
