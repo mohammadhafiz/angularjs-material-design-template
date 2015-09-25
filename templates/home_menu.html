@@ -1,28 +1,32 @@
 <md-list flex
     ng-controller="HomeMenuController">
-    <md-subheader class="md-no-sticky">{{ 'title_menu' | translate }}</md-subheader>
-    <md-list-item ng-click="Home()">
-        <md-icon>home</md-icon>
-        <p>{{ 'title_home' | translate }}</p>
+    <md-subheader class="md-no-sticky">{{ 'title_menu' | translate }}</md-subheader>     
+    <md-list-item ng-click="Dashboard()">
+        <md-icon>dashboard</md-icon>
+        <p>{{ 'title_dashboard' | translate }}</p>
     </md-list-item>
-    <md-list-item ng-click="Home()">
-        <md-icon>home</md-icon>
-        <p>{{ 'title_home' | translate }}</p>
+    <md-list-item ng-click="Charts()">
+        <md-icon>insert_chart</md-icon>
+        <p>{{ 'title_insert_chart' | translate }}</p>
     </md-list-item>
-    <md-list-item ng-click="Home()">
-        <md-icon>home</md-icon>
-        <p>{{ 'title_home' | translate }}</p>
+    <md-list-item ng-click="Tables()">
+        <md-icon>web</md-icon>
+        <p>{{ 'title_table' | translate }}</p>
     </md-list-item>
-    <md-list-item ng-click="Home()">
-        <md-icon>home</md-icon>
-        <p>{{ 'title_home' | translate }}</p>
+    <md-list-item ng-click="Form()">
+        <md-icon>edit</md-icon>
+        <p>{{ 'title_form' | translate }}</p>
     </md-list-item>
-    <md-list-item ng-click="Home()">
-        <md-icon>home</md-icon>
-        <p>{{ 'title_home' | translate }}</p>
+    <md-list-item ng-click="uiElement()">
+        <md-icon>build</md-icon>
+        <p>{{ 'title_ui_element' | translate }}</p>
     </md-list-item>
-    <md-list-item ng-click="Home()">
-        <md-icon>home</md-icon>
-        <p>{{ 'title_home' | translate }}</p>
+    <md-list-item ng-click="dropDown()">
+        <md-icon>arrow_drop_down_circle</md-icon>
+        <p>{{ 'title_drop_down' | translate }}</p>
+    </md-list-item>
+    <md-list-item ng-click="samplePage()">
+        <md-icon>content_copy</md-icon>
+        <p>{{ 'title_sample_pages' | translate }}</p>
     </md-list-item>
 </md-list>
