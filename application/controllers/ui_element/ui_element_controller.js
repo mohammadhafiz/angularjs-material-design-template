@@ -1,5 +1,5 @@
-application.controller('UiElementController', ['$location', '$mdSidenav', '$scope', '$translate',
-    function($location, $mdSidenav, $scope, $translate)
+application.controller('UiElementController', ['$mdSidenav', '$scope',
+    function($mdSidenav, $scope)
     {
         $scope.theme = 'deep-purple';
 

@@ -1,5 +1,5 @@
-application.controller('ChartsController', ['$location', '$mdSidenav', '$scope', '$translate',
-    function($location, $mdSidenav, $scope, $translate)
+application.controller('ChartsController', ['$mdSidenav', '$scope',
+    function($mdSidenav, $scope)
     {
         $scope.theme = 'teal';
 

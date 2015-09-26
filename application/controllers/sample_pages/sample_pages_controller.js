@@ -1,7 +1,7 @@
-application.controller('SamplePagesController', ['$location', '$mdSidenav', '$scope', '$translate',
-    function($location, $mdSidenav, $scope, $translate)
+application.controller('SamplePagesController', ['$mdSidenav', '$scope',
+    function($mdSidenav, $scope)
     {
-        $scope.theme = 'light-green';
+        $scope.theme = 'teal';
 
         $scope.close = function()
         {

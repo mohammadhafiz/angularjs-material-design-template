@@ -1,7 +1,7 @@
-application.controller('DropDownController', ['$location', '$mdSidenav', '$scope', '$translate',
-    function($location, $mdSidenav, $scope, $translate)
+application.controller('DropDownController', ['$mdSidenav', '$scope',
+    function($mdSidenav, $scope)
     {
-        $scope.theme = 'pink';
+        $scope.theme = 'teal';
 
         $scope.close = function()
         {

@@ -1,5 +1,5 @@
-application.controller('DashboardController', ['$interval', '$location', '$mdSidenav', '$scope', '$translate', 
-    function($interval, $location, $mdSidenav, $scope, $translate)
+application.controller('DashboardController', ['$interval', '$mdSidenav', '$scope',
+    function($interval, $mdSidenav, $scope)
     {
         $scope.theme = 'cyan';
 

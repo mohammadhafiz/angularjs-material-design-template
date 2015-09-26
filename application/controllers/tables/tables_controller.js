@@ -1,7 +1,7 @@
-application.controller('TablesController', ['$location', '$mdSidenav', '$scope', '$translate',
-    function($location, $mdSidenav, $scope, $translate)
+application.controller('TablesController', ['$mdSidenav', '$scope',
+    function($mdSidenav, $scope)
     {
-        $scope.theme = 'red';
+        $scope.theme = 'teal';
 
         $scope.close = function()
         {

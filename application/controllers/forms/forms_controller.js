@@ -1,7 +1,7 @@
-application.controller('FormsController', ['$location', '$mdSidenav', '$scope',
-    function($location, $mdSidenav, $scope)
+application.controller('FormsController', ['$mdSidenav', '$scope',
+    function($mdSidenav, $scope)
     {
-        $scope.theme = 'green';
+        $scope.theme = 'teal';
 
         $scope.close = function()
         {
