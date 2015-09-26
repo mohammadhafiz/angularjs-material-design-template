@@ -31,4 +31,9 @@ application.controller('FormsController', ['$location', '$mdSidenav', '$scope',
           biography: 'Loves kittens, snowboarding, and can type at 130 WPM.\n\nAnd rumor has it she bouldered up Castle Craig!',
           postalCode : '91000',
         };
-    }]);
+    
+          $scope.title1 = 'Button';
+          $scope.title4 = 'Warn';
+          $scope.isDisabled = true;
+          $scope.googleUrl = 'http://google.com';
+}]);
