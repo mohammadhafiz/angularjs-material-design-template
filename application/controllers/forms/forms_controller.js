@@ -1,11 +1,7 @@
-application.controller('FormsController', ['$location', '$mdSidenav', '$mdThemingProvider', '$scope', '$translate',
-    function($location, $mdSidenav, $mdThemingProvider, $scope, $translate)
+application.controller('FormsController', ['$location', '$mdSidenav', '$scope',
+    function($location, $mdSidenav, $scope)
     {
         $scope.theme = 'green';
-
-        $scope.query = {
-            username: '',
-        };
 
         $scope.close = function()
         {
@@ -22,24 +18,17 @@ application.controller('FormsController', ['$location', '$mdSidenav', '$mdThemin
             $mdSidenav('menu').open();
         };
         
-        $scope.user = function()
+        $scope.user = 
         {
           title: 'Developer',
-          email: 'ipsum@lorem.com',
-          firstName: '',
-          lastName: '' ,
-          company: 'Google' ,
-          address: '1600 Amphitheatre Pkwy' ,
-          city: 'Mountain View' ,
-          state: 'CA' ,
+          email: 'mohammadhafizamiruddin@gmail.com',
+          firstName: 'Mohammad Hafiz',
+          lastName: 'Amiruddin' ,
+          company: 'Menggaris It Sdn Bhd' ,
+          address: 'Batu 3 Jalan Apas' ,
+          city: 'Tawau' ,
+          state: 'Sabah' ,
           biography: 'Loves kittens, snowboarding, and can type at 130 WPM.\n\nAnd rumor has it she bouldered up Castle Craig!',
-          postalCode : '94043'
+          postalCode : '91000',
         };
-        
-          .config( function()
-          {
-            $mdThemingProvider.theme('light-green', 'default')
-                .primaryPalette('yellow')
-                .dark();
-          };
     }]);
