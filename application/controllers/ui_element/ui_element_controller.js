@@ -3,34 +3,16 @@ application.controller('UiElementController', ['$location', '$mdSidenav', '$scop
     {
         $scope.theme = 'deep-purple';
 
-        $scope.query = {
-            username: '',
-        };
-
         $scope.close = function()
         {
             $mdSidenav('menu').close();
         };
 
-        $scope.reset = function()
-        {
-            $scope.query.$ = '';
-        };
-
+        $scope.items = [1,2,3,4,5];
+        
         $scope.menu = function()
         {
             $mdSidenav('menu').open();
-        };
-
-        $scope.items = [1,2,3,4,5];
-        
-        $scope.selected = [];
-        
-        $scope.toggle = function (item, list) 
-        {
-            var idx = list.indexOf(item);
-            if (idx > -1) list.splice(idx, 1);
-            else list.push(item);
         };
         
         $scope.exists = function (item, list) 
@@ -67,5 +49,24 @@ application.controller('UiElementController', ['$location', '$mdSidenav', '$scop
           $scope.rating3 = 4;
           $scope.disabled1 = 0;
           $scope.disabled2 = 70;
+
+        $scope.query = 
+        {
+            username: '',
+        };
+
+        $scope.reset = function()
+        {
+            $scope.query.$ = '';
+        };
+          
+        $scope.selected = [];
+        
+        $scope.toggle = function (item, list) 
+        {
+            var idx = list.indexOf(item);
+            if (idx > -1) list.splice(idx, 1);
+            else list.push(item);
+        };
     }]);
     

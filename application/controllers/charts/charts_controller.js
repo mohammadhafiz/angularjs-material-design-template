@@ -3,22 +3,22 @@ application.controller('ChartsController', ['$location', '$mdSidenav', '$scope',
     {
         $scope.theme = 'teal';
 
-        $scope.query = {
-            username: '',
-        };
-
         $scope.close = function()
         {
             $mdSidenav('menu').close();
         };
 
-        $scope.reset = function()
-        {
-            $scope.query.$ = '';
-        };
-
         $scope.menu = function()
         {
             $mdSidenav('menu').open();
+        };
+
+        $scope.query = {
+            username: '',
+        };
+
+        $scope.reset = function()
+        {
+            $scope.query.$ = '';
         };
     }]);

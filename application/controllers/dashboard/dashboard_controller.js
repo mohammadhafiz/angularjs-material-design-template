@@ -3,23 +3,23 @@ application.controller('DashboardController', ['$interval', '$location', '$mdSid
     {
         $scope.theme = 'cyan';
 
-        $scope.query = {
-            username: '',
-        };
-
         $scope.close = function()
         {
             $mdSidenav('menu').close();
         };
 
-        $scope.reset = function()
-        {
-            $scope.query.$ = '';
-        };
-
         $scope.menu = function()
         {
             $mdSidenav('menu').open();
+        };
+
+        $scope.query = {
+            username: '',
+        };
+
+        $scope.reset = function()
+        {
+            $scope.query.$ = '';
         };
 
         var self = this, j= 0, counter = 0;
@@ -52,4 +52,4 @@ application.controller('DashboardController', ['$interval', '$location', '$mdSid
         $interval(function() {
           self.mode = (self.mode == 'query' ? 'determinate' : 'query');
         }, 7200, 0, true);
-      }]);
+}]);
