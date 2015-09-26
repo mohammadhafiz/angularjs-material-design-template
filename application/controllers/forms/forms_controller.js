@@ -1,5 +1,5 @@
-application.controller('FormsController', ['$location', '$mdSidenav', '$scope', '$translate',
-    function($location, $mdSidenav, $scope, $translate)
+application.controller('FormsController', ['$location', '$mdSidenav', '$mdThemingProvider', '$scope', '$translate',
+    function($location, $mdSidenav, $mdThemingProvider, $scope, $translate)
     {
         $scope.theme = 'green';
 
@@ -35,4 +35,11 @@ application.controller('FormsController', ['$location', '$mdSidenav', '$scope', 
           biography: 'Loves kittens, snowboarding, and can type at 130 WPM.\n\nAnd rumor has it she bouldered up Castle Craig!',
           postalCode : '94043'
         };
+        
+          .config( function()
+          {
+            $mdThemingProvider.theme('light-green', 'default')
+                .primaryPalette('yellow')
+                .dark();
+          };
     }]);
