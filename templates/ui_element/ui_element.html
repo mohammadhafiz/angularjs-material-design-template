@@ -67,8 +67,56 @@
                 </md-button>
             </div>
         </md-toolbar>
-            <div>
-            <h2>Content</h2>
+        
+        <div ng-controller="UiElementController" class="md-padding">
+          <div layout="row">
+            <div flex="50" flex-md="100" layout="column">
+              <fieldset class="standard" flex>
+                <legend>Using <code>md-checkbox</code> with <code>ng-checked</code></legend>
+                <div layout="row" layout-wrap>
+                  <div flex="50" ng-repeat="item in items">
+                    <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">
+                      {{ item }} <span ng-if="exists(item, selected)">selected</span>
+                    </md-checkbox>
+                  </div>
+                </div>
+              </fieldset>
             </div>
+            <div flex="50" flex-md="100" layout="column">
+              <fieldset class="standard" flex>
+                <legend>Using <code>&lt;input type="checkbox"&gt;</code></legend>
+                <div layout="row" layout-wrap>
+                  <div ng-repeat="item in items" class="standard" flex="50">
+                    <label>
+                      <input type="checkbox" ng-checked="exists(item, selected)" ng-click="toggle(item, selected)"/>
+                      {{ item }}
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <h2 class="md-title">Selected Items</h2>
+          <code style="display: block; padding: 8px;">{{selected | json}}</code>
+
+            <h4>Standard date-picker</h4>
+            <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+            <h4>Disabled date-picker</h4>
+            <md-datepicker ng-model="myDate" md-placeholder="Enter date" disabled></md-datepicker>
+            <h4>Date-picker with min date and max date</h4>
+            <md-datepicker ng-model="myDate" md-placeholder="Enter date"
+                md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+            <h4>With ngMessages</h4>
+            <form name="myForm">
+              <md-datepicker name="dateField" ng-model="myDate" md-placeholder="Enter date"
+                  required md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+              <div class="validation-messages" ng-messages="myForm.dateField.$error">
+                <div ng-message="required">This date is required!</div>
+                <div ng-message="mindate">Date is too early!</div>
+                <div ng-message="maxdate">Date is too late!</div>
+              </div>
+            </form>
+          </md-content>
+        </div>
     </md-content>
 </md-content>
