@@ -52,7 +52,7 @@ application.controller('UiElementController', ['$mdSidenav', '$scope',
 
         $scope.query = 
         {
-            username: '',
+            $: '',
         };
 
         $scope.reset = function()
