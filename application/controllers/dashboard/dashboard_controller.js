@@ -1,7 +1,7 @@
 application.controller('DashboardController', ['$interval', '$mdSidenav', '$scope',
     function($interval, $mdSidenav, $scope)
     {
-        $scope.theme = 'cyan';
+        $scope.theme = 'teal';
 
         $scope.close = function()
         {

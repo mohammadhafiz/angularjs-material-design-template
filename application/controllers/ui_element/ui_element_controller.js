@@ -1,7 +1,7 @@
 application.controller('UiElementController', ['$mdSidenav', '$scope',
     function($mdSidenav, $scope)
     {
-        $scope.theme = 'deep-purple';
+        $scope.theme = 'teal';
 
         $scope.close = function()
         {
