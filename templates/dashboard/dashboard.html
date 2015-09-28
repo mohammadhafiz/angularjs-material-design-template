@@ -68,6 +68,30 @@
             </div>
         </md-toolbar>
             <div ng-controller="DashboardController as vm" md-theme="light-green" layout-margin style="padding:25px;">
+            
+            <div layout="row" layout-margin>
+              <div class="panel-heading" flex flex-order="4">
+                <md-tooltip>{{ 'action_comment' | translate }}</md-tooltip>
+                    <md-icon>comment</md-icon>
+                    New Comments
+              </div>
+              <div class="panel-heading" flex flex-order="3">
+                <md-tooltip>{{ 'action_person' | translate }}</md-tooltip>
+                    <md-icon>person</md-icon>
+                    New Task
+              </div>
+              <div class="panel-heading" flex flex-order="2">
+                <md-tooltip>{{ 'action_shopping_cart' | translate }}</md-tooltip>
+                    <md-icon>shopping_cart</md-icon>
+                    New Order
+              </div>
+              <div class="panel-heading" flex flex-order="1">
+                <md-tooltip>{{ 'action_details' | translate }}</md-tooltip>
+                    <md-icon>details</md-icon>
+                    Details
+              </div>
+            </div>
+            
               <h2 class="md-title">Determinate</h2>
               <p>
                 For operations where the percentage of the operation completed can be determined, use a <b>determinate</b>

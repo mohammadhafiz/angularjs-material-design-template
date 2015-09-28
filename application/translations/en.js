@@ -4,11 +4,15 @@ application.config(['$translateProvider',
         $translateProvider.translations('en', {
             
             'action_back': 'Back',
+            'action_comment': 'Comment',
+            'action_details': 'Details',
             'action_email': 'Email',
             'action_menu': 'Menu',
             'action_notifications': 'Notifications',
+            'action_person': 'Person',
             'action_reset': 'Reset',
             'action_search': 'Search',
+            'action_shopping_cart': 'Shopping Cart',
             
             'title_insert_chart': 'Charts',
             'title_dashboard': 'Dashboard',
