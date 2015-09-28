@@ -20,7 +20,7 @@
         <md-toolbar class="md-whiteframe-z2"
             md-scroll-shrink>
             <div class="md-toolbar-tools"
-                ng-if="theme == 'green'">
+                ng-if="theme == 'teal'">
                 <md-button class="md-icon-button"
                     hide-gt-md
                     ng-click="menu()">
@@ -49,7 +49,7 @@
             <div class="md-toolbar-tools"
                 ng-if="theme == 'white'">
                 <md-button class="md-icon-button"
-                    ng-click="$parent.theme = 'green'">
+                    ng-click="$parent.theme = 'teal'">
                     <md-tooltip>{{ 'action_back' | translate }}</md-tooltip>
                     <md-icon>arrow_back</md-icon>
                 </md-button>
@@ -67,7 +67,8 @@
                 </md-button>
             </div>
         </md-toolbar>
-        <div ng-controller="FormsController" layout="column">
+
+        <div>
           <md-content md-theme="{{thema}}" layout-padding layout="row" layout-sm="column">
             <md-input-container flex>
               <label>Title</label>
@@ -126,7 +127,7 @@
           </md-content>
         </div>
         
-        <div ng-controller="FormsController">
+        <div>
           <md-content>
             <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
               <md-button>{{title1}}</md-button>

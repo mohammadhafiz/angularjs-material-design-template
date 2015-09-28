@@ -1,5 +1,5 @@
-application.controller('FormsController', ['$mdSidenav', '$scope',
-    function($mdSidenav, $scope)
+application.controller('FormsController', ['$mdSidenav', '$scope', '$translate',
+    function($mdSidenav, $scope, $translate)
     {
         $scope.theme = 'teal';
 
@@ -14,7 +14,7 @@ application.controller('FormsController', ['$mdSidenav', '$scope',
         };
 
         $scope.query = {
-            username: '',
+            $: '',
         };
 
         $scope.reset = function()
@@ -29,11 +29,12 @@ application.controller('FormsController', ['$mdSidenav', '$scope',
           firstName: 'Mohammad Hafiz',
           lastName: 'Amiruddin' ,
           company: 'Menggaris It Sdn Bhd' ,
-          address: 'Batu 3 Jalan Apas' ,
+          address: 'Batu 3' ,
+          address2: 'Jalan Apas' ,
           city: 'Tawau' ,
           state: 'Sabah' ,
           biography: 'Loves kittens, snowboarding, and can type at 130 WPM.\n\nAnd rumor has it she bouldered up Castle Craig!',
-          postalCode : '91000',
+          postalCode : '91000'
         };
     
           $scope.title1 = 'Button';
