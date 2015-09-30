@@ -27,7 +27,7 @@
                     <md-tooltip>{{ 'action_menu' | translate }}</md-tooltip>
                     <md-icon>menu</md-icon>
                 </md-button>
-                <h2 class="md-title">{{ 'title_table' | translate }}</h2>
+                <h2 class="md-title">{{ 'title_ui_element' | translate }}</h2>
                 <span flex></span>
                 <md-button class="md-icon-button"
                     ng-click="$parent.theme = 'white'">
@@ -67,120 +67,8 @@
                 </md-button>
             </div>
         </md-toolbar>
-        
-        <div ng-controller="UiElementController" class="md-padding">
-          <div layout="row">
-            <div flex="50" flex-md="100" layout="column">
-              <fieldset class="standard" flex>
-                <legend>Using <code>md-checkbox</code> with <code>ng-checked</code></legend>
-                <div layout="row" layout-wrap>
-                  <div flex="50" ng-repeat="item in items">
-                    <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">
-                      {{ item }} <span ng-if="exists(item, selected)">selected</span>
-                    </md-checkbox>
-                  </div>
-                </div>
-              </fieldset>
+            <div>
+            <h2>Content</h2>
             </div>
-            <div flex="50" flex-md="100" layout="column">
-              <fieldset class="standard" flex>
-                <legend>Using <code>&lt;input type="checkbox"&gt;</code></legend>
-                <div layout="row" layout-wrap>
-                  <div ng-repeat="item in items" class="standard" flex="50">
-                    <label>
-                      <input type="checkbox" ng-checked="exists(item, selected)" ng-click="toggle(item, selected)"/>
-                      {{ item }}
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-          </div>
-          <h2 class="md-title">Selected Items</h2>
-          <code style="display: block; padding: 8px;">{{selected | json}}</code>
-
-          <md-content style="margin: 16px; padding:16px">
-            <h3>
-              RGB <span ng-attr-style="border: 1px solid #333; background: rgb({{color.red}},{{color.green}},{{color.blue}})">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            </h3>
-            <div layout>
-              <div flex="10" layout layout-align="center center">
-                <span class="md-body-1">R</span>
-              </div>
-              <md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider" class>
-              </md-slider>
-              <div flex="20" layout layout-align="center center">
-                <input flex type="number" ng-model="color.red" aria-label="red" aria-controls="red-slider">
-              </div>
-            </div>
-            <div layout>
-              <div flex="10" layout layout-align="center center">
-                <span class="md-body-1">G</span>
-              </div>
-              <md-slider flex ng-model="color.green" min="0" max="255" aria-label="green" id="green-slider" class="md-accent">
-              </md-slider>
-              <div flex="20" layout layout-align="center center">
-                <input flex type="number" ng-model="color.green" aria-label="green" aria-controls="green-slider">
-              </div>
-            </div>
-            <div layout>
-              <div flex="10" layout layout-align="center center">
-                <span class="md-body-1">B</span>
-              </div>
-              <md-slider flex ng-model="color.blue" min="0" max="255" aria-label="blue" id="blue-slider" class="md-primary">
-              </md-slider>
-              <div flex="20" layout layout-align="center center">
-                <input flex type="number" ng-model="color.blue" aria-label="blue" aria-controls="blue-slider">
-              </div>
-            </div>
-            <h3>Rating: {{rating}}/5 - demo of theming classes</h3>
-            <div layout>
-              <div flex="10" layout layout-align="center center">
-                <span class="md-body-1">default</span>
-              </div>
-              <md-slider flex md-discrete ng-model="rating1" step="1" min="1" max="5" aria-label="rating">
-              </md-slider>
-            </div>
-            <div layout>
-              <div flex="10" layout layout-align="center center">
-                <span class="md-body-1">md-warn</span>
-              </div>
-              <md-slider flex class="md-warn" md-discrete ng-model="rating2" step="1" min="1" max="5" aria-label="rating">
-              </md-slider>
-            </div>
-            <div layout>
-              <div flex="10" layout layout-align="center center">
-                <span class="md-body-1">md-primary</span>
-              </div>
-              <md-slider flex class="md-primary" md-discrete ng-model="rating3" step="1" min="1" max="5" aria-label="rating">
-              </md-slider>
-            </div>
-            <h3>Disabled</h3>
-            <md-slider ng-model="disabled1" ng-disabled="true" aria-label="Disabled 1"></md-slider>
-            <md-slider ng-model="disabled2" ng-disabled="true" aria-label="Disabled 2"></md-slider>
-            <h3>Disabled, Discrete</h3>
-            <md-slider ng-model="disabled1" ng-disabled="true" step="3" md-discrete min="0" max="10" aria-label="Disabled discrete 1"></md-slider>
-            <md-slider ng-model="disabled2" ng-disabled="true" step="10" md-discrete aria-label="Disabled discrete 2"></md-slider>
-          </md-content>
-
-            <h4>Standard date-picker</h4>
-            <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
-            <h4>Disabled date-picker</h4>
-            <md-datepicker ng-model="myDate" md-placeholder="Enter date" disabled></md-datepicker>
-            <h4>Date-picker with min date and max date</h4>
-            <md-datepicker ng-model="myDate" md-placeholder="Enter date"
-                md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
-            <h4>With ngMessages</h4>
-            <form name="myForm">
-              <md-datepicker name="dateField" ng-model="myDate" md-placeholder="Enter date"
-                  required md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
-              <div class="validation-messages" ng-messages="myForm.dateField.$error">
-                <div ng-message="required">This date is required!</div>
-                <div ng-message="mindate">Date is too early!</div>
-                <div ng-message="maxdate">Date is too late!</div>
-              </div>
-            </form>
-          </md-content>
-        </div>
     </md-content>
 </md-content>
