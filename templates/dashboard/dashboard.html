@@ -68,7 +68,23 @@
             </div>
         </md-toolbar>
             <div>
-            <h2>Content</h2>
+            <center>
+            <form ng-submit="todoAdd()">
+            <md-input-container style="width:50%">
+                <label>Text</label>
+                <input ng-model="todoInput">
+            </md-input-container>
+                <md-button class="md-raised md-primary" ng-click="submit()">Add</md-button>
+            </form>
+
+            <br>
+            <div ng-repeat="x in todoList">
+            <md-checkbox ng-model="x.done" aria-label="Checkbox 1" style="width:30%">
+                {{ x.todoText }}
+            </md-checkbox>
+            </div>
+            <md-button class="md-raised md-primary" ng-click="remove()">Delete</md-button>
+            </center>
             </div>
     </md-content>
 </md-content>
